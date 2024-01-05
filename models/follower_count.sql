@@ -18,7 +18,7 @@ with source_data as (
         JSON_EXTRACT_SCALAR(object, '$[3]') AS CHANGE_FOLLOWERS_COUNT,
         JSON_EXTRACT_SCALAR(object, '$[4]') AS CHANGE_FOLLOWERS_COUNT_CHANGE,
     FROM
-       `airbyte_internal.transformed_events_raw__stream_sprinklr_follower_count`,
+       `airbyte_internal.transformed_events_raw__stream_follower_count`,
         UNNEST(JSON_EXTRACT_ARRAY(_airbyte_data, '$.data.rows')) AS object      
 )
 select * from source_data
