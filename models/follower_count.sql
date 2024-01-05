@@ -21,7 +21,7 @@ with source_data as (
         `airbyte_internal.transformed_events_raw__stream_Sprinklr_Follower_Count_Facebook`,
         UNNEST(JSON_EXTRACT_ARRAY(_airbyte_data, '$.data.rows')) AS object      
 )
-select * from source_data;
+select * from source_data
 
 /*
     Uncomment the line below to remove records with null `id` values
