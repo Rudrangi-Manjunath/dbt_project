@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: follower_count
+    description: "A starter dbt model"
+    columns:
+      - name: date
+        description: "The primary key for this table"
+        tests:
+          - not_null
+
